@@ -1,0 +1,7 @@
+*.mp4
+*.csv
+.env
+data/
+.DS_Store
+__pycache__
+.ipynb_checkpoints
