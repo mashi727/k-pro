@@ -118,11 +118,12 @@ def main():
     data_frame = fetch_notion_data(api_key, database_id)
 
     # 結果の表示
-    print(data_frame.to_string(justify='left'))
 
     # DataFrameをpickle形式で保存
     filename = 'portfolio.pkl'
-    data_frame.to_pickle(filename)
+    db = ['ID','TickerSymbol','Name']
+    data_frame_db = data_frame[db]
+    data_frame_db.to_pickle(filename)
 
 if __name__ == "__main__":
     main()
