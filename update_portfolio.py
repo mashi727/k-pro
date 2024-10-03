@@ -121,7 +121,7 @@ def main():
 
     # DataFrameをpickle形式で保存
     filename = 'portfolio.pkl'
-    db = ['ID','TickerSymbol','Name']
+    db = ['ID','TickerSymbol','is_active', 'Name']
     data_frame_db = data_frame[db]
     data_frame_db.to_pickle(filename)
 
